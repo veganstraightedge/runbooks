@@ -5,6 +5,12 @@ runbook = Runbook.book 'Fix Postgres' do
   description 'This runbook is for when postgres doesn’t seem to be working'
 
   section 'Check Postgres is installed' do
+    step 'Set Postgres version' do
+      ask "What version of Postgres do you want to fix? (9.4 9.5 9.6 10 11/latest)", into: :greatest, default: "9.6"
+
+      ruby_command { note "Postgres version set to: #{@greatest}" }
+    end
+
     step 'Check brew installation' do
 
       # command %q{brew info postgresql | grep 'installed'}
