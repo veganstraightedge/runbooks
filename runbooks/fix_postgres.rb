@@ -12,7 +12,6 @@ runbook = Runbook.book 'Fix Postgres' do
     end
 
     step 'Check brew installation' do
-
       # command %q{brew info postgresql | grep 'installed'}
 
       # note 'brew info postgresql'
