@@ -40,12 +40,12 @@ runbook = Runbook.book 'Fix Postgres' do
   section 'Is postmaster.pid the culprit?' do
     step 'Check for postmaster.pid' do
       note 'cat /usr/local/var/postgresql/postmaster.pid'
-      note 'cat /usr/local/var/postgresq/postmaster.pid'
+      note 'cat /usr/local/var/postgres/postmaster.pid'
     end
 
     step 'Delete postmaster.pid' do
       note 'rm /usr/local/var/postgresql/postmaster.pid'
-      note 'rm /usr/local/var/postgresq/postmaster.pid'
+      note 'rm /usr/local/var/postgres/postmaster.pid'
     end
 
     step 'Check brew services again' do
