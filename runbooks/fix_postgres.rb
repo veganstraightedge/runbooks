@@ -42,12 +42,14 @@ runbook = Runbook.book 'Fix Postgres' do
       note 'cat /usr/local/var/postgresql/postmaster.pid'
       note 'cat /usr/local/var/postgres/postmaster.pid'
       note 'cat /opt/homebrew/var/postgres/postmaster.pid'
+      note 'cat /opt/homebrew/var/postgresql@14/postmaster.pid'
     end
 
     step 'Delete postmaster.pid' do
       note 'rm /usr/local/var/postgresql/postmaster.pid'
       note 'rm /usr/local/var/postgres/postmaster.pid'
       note 'rm /opt/homebrew/var/postgres/postmaster.pid'
+      note 'rm /opt/homebrew/var/postgresql@14/postmaster.pid'
     end
 
     step 'Check brew services again' do
